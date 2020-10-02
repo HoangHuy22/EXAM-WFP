@@ -22,9 +22,16 @@ namespace EXAM_WFP.Pages
     /// </summary>
     public sealed partial class Add_user : Page
     {
+        private service service;
         public Add_user()
         {
             this.InitializeComponent();
+        }
+
+        private void Btn_Click(object sender, RoutedEventArgs e)
+        {
+            service.Add_user(username.Text, pass.Text);
+
         }
     }
 }
